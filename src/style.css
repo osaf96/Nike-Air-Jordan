@@ -39,6 +39,12 @@ label {
   color: #fff;
   font-size: 2rem;
 }
+.title {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  padding-top: 16px;
+}
 .heading {
   color: #fff;
   position: relative;
@@ -75,4 +81,14 @@ label {
   position: relative;
   padding: 1rem;
   text-align: center;
+}
+/* progress::-moz-progress-bar {
+  border-radius: 24px;
+} */
+progress::-webkit-progress-value {
+  background: #fff !important;
+  border-radius: 12px;
+}
+progress {
+  background-color: #fff;
 }
