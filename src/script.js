@@ -15,6 +15,49 @@ let AirLogo = document.getElementById('air-logo')
 let AirDetails = document.getElementById('details')
 let End = document.getElementById('ending')
 
+// cursor animation
+var cursor = document.querySelector(".cursor")
+var cursorScale = document.querySelectorAll(".cursor-scale")
+var mouseX = 0
+var mouseY = 0
+
+
+gsap.to({}, 0.016, {
+  repeat: -1,
+
+
+  onRepeat: () => {
+    gsap.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY
+      }
+    })
+  }
+})
+
+window.addEventListener("mousemove", (event) => {
+  mouseX = event.clientX
+  mouseY = event.clientY
+})
+
+
+cursorScale.forEach(link => {
+  link.addEventListener("mouseleave", () => {
+    cursor.classList.remove('grow')
+    cursor.classList.remove("grow-small")
+  })
+  link.addEventListener("mousemove", () => {
+    cursor.classList.add('grow')
+    if (link.classList.contains('small')) {
+      cursor.classList.remove("grow")
+      cursor.classList.add("grow-small")
+    }
+  })
+
+
+});
+
 
 // Debug
 // const gui = new dat.GUI()
@@ -74,17 +117,17 @@ gltfloader.load(
       //   // o.alphaMap = false
       // }
     })
-
+    // 
     //    gsap animation
     Heading.innerHTML = '<p>click on page to to get info</p>'
-    window.addEventListener('mouseup', () => {
+    window.addEventListener("mouseup", () => {
       switch (position) {
         case 0:
           movecamera(-3.4, 0.8, -1)
           rotatecamera(3, 1, 0.3)
           position = 1
           Heading.innerHTML = '<p>click on page to to get info</p>'
-          AirLogo.innerHTML = ' <h2>Air Jordan </h2>';
+          AirLogo.innerHTML = '<h2>Air Jordan</h2>'
           AirDetails.innerHTML = '<p>The Jumpman logo is owned by Nike to promote the Air Jordan brand of basketball sneakers and other sportswear. It is the silhouette of former Chicago Bulls NBA player and current Charlotte Hornets owner Michael Jordan.</p>'
           break;
         case 1:
@@ -131,7 +174,9 @@ gltfloader.load(
     }
 
   }
+
 )
+
 
 
 /**
