@@ -8,7 +8,11 @@
 </head>
 
 <body>
-  <canvas class="webgl"></canvas>
+  <canvas class="webgl cursor-scale"></canvas>
+  <!-- cursor  -->
+  <div class="cursor"></div>
+
+  <!-- Loading -->
   <div class="progress-bar-container">
     <label for="progress-bar">Loading...</label>
     <progress id="progress-bar" value="0" max="100"></progress>
@@ -16,17 +20,17 @@
 
   <header class="header">
     <div class="nav">
-      <img src="./img/pngwing.com.png" alt="" class="logo" />
+      <img src="./img/pngwing.com.png" alt="" class="logo cursor-scale" />
 
-      <img src="./img//nike_PNG4.png" class="logo-2">
+      <img src="./img//nike_PNG4.png" class="logo-2 cursor-scale">
 
       <p class="info" id="info"></p>
     </div>
   </header>
 
   <div class="animation-details">
-    <h1 class="air-logo" id="air-logo"></h1>
-    <p class="details" id="details"></p>
+    <h1 class="air-logo cursor-scale" id="air-logo"></h1>
+    <p class="details cursor-scale" id="details"></p>
     <span class="ending" id="ending"></span>
   </div>
 </body>
