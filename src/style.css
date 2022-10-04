@@ -86,6 +86,7 @@ font-size: 20px;
 }
 .animation-details {
   width: 40%;
+ 
 }
 .air-logo {
   padding: 1rem;
@@ -112,4 +113,26 @@ progress::-webkit-progress-value {
 }
 progress {
   background-color: #fff;
+}
+/* cursor style */
+.cursor{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  transition: transform .2s ease;
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 1000;
+}
+.grow , .grow-small{
+  transform: scale(3);
+  background: #FFF;
+  mix-blend-mode: difference;
+}
+.grow-small{
+  transform: scale(2.5);
 }
