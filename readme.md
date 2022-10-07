@@ -4,7 +4,7 @@
 
 ![04 10 2022_14 54 56_REC](https://user-images.githubusercontent.com/22621352/194522762-b79cd13e-8cca-4662-bc4d-add3cd904041.png)
 #nike web 
-nike 3d  web create using threejs and gsap (library to animate page) 
+3d  web create using threejs and gsap (library to animate page) 
 
 
 
