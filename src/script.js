@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 // import {RGBELoader} from 'three/examples/jsm/loaders/RGBELoader.js'
 // import * as dat from 'lil-gui'
 import gsap from 'gsap'
-
+import { ARButton } from "three/examples/jsm/webxr/ARButton.js"
 
 /**
  * Base
@@ -178,7 +178,6 @@ gltfloader.load(
 )
 
 
-
 /**
  * Floor
  */
@@ -257,10 +256,18 @@ const renderer = new THREE.WebGLRenderer({
   alpha: true
 
 })
+renderer.xr.enabled = true
 renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+// ARButton
+const button = ARButton.createButton(renderer)
+document.body.appendChild(button)
+
+// const button = ARButton.createButton(renderer)
+// document.appendChild(button)
 
 /**
  * Animate

@@ -50,7 +50,7 @@ label {
   position: absolute;
   text-align: center;
   padding-top: 16px;
-  bottom: 2%;
+  bottom: 10%;
   left: 45%;
   cursor: pointer;
   opacity: 0.8;
@@ -102,7 +102,7 @@ font-size: 20px;
 .ending {
   color: #fff;
   position: relative;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
 }
 
